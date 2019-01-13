@@ -24,36 +24,48 @@
    <link rel="stylesheet" href="style.css">
 
   <form class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net"
-  action="https://script.google.com/macros/s/AKfycbxRkKVeWbSHA98QXUFlO8sdZpKTqtq9M_Sxf5rn/exec">
+  action="https://script.google.com/macros/s/AKfycbxvfqdH8kbhJGNHBrSyv9GLrkLPY3if1VdHH7v77YJbjk0S0SdO/exec">
     <!-- change the form action to your script url -->
 
     <div class="form-elements">
       <fieldset class="pure-group">
-        <label for="name">Name: </label>
-        <input id="name" name="name" placeholder="What your Mom calls you" />
+        <label for="name">Naam: </label>
+        <input id="name" name="Naam" placeholder="Voor- en achternaam" />
       </fieldset>
-
+        
       <fieldset class="pure-group">
-        <label for="message">Message: </label>
-        <textarea id="message" name="message" rows="10"
-        placeholder="Tell us what's on your mind..."></textarea>
-      </fieldset>
-
-      <fieldset class="pure-group">
-        <label for="email"><em>Your</em> Email Address:</label>
-        <input id="email" name="email" type="email" value=""
-        required placeholder="your.name@email.com"/>
+        <label for="email">Emailadres:</label>
+        <input id="email" name="Mailadres" type="email" value=""
+        required placeholder="naam@email.com"/>
         <span class="email-invalid" style="display:none">
-          Must be a valid email address</span>
+          Het moet een geldig mailadres zijn, hierop ontvang je later updates over de bruiloft.</span>
       </fieldset>
+        
+      <fieldset class="pure-group">
+        <label for="aanwezigheid">Aanwezigheid: </label>
+        <input id="aanwezigheid" name="Aanwezigheid" placeholder="Geef aan of je aanwezig bent" />
+      </fieldset>  
 
       <fieldset class="pure-group">
-        <label for="color">Favourite Color: </label>
-        <input id="color" name="color" placeholder="green" />
+        <label for="voedsel">Voedsel allergiën: </label>
+        <textarea id="voedsel" name="Voedsel" rows="2"
+        placeholder="Meld hier eventuele voedselallergiën"></textarea>
+      </fieldset>
+        
+      <fieldset class="pure-group">
+        <label for="opmerkingen">Opmerkingen: </label>
+        <textarea id="opmerkingen" name="Opmerkingen" rows="5"
+        placeholder="Hier kun je eventuele verdere opmerkingen kwijt"></textarea>
+      </fieldset>
+        
+       <fieldset class="pure-group">
+        <label for="verblijf">Heb je interesse in verblijf? </label>
+        <textarea id="verblijf" name="Verblijf" rows="2"
+        placeholder="Geef het hier aan"></textarea>
       </fieldset>
 
       <button class="button-success pure-button button-xlarge">
-        <i class="fa fa-paper-plane"></i>&nbsp;Send</button>
+        <i class="fa fa-paper-plane"></i>&nbsp;Verstuur</button>
     </div>
 
     <!-- Customise the Thankyou Message People See when they submit the form: -->
