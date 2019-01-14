@@ -2,7 +2,7 @@
   <div id="app">
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#app">Start Bootstrap</a>
+        <a class="navbar-brand js-scroll-trigger" href="#app">Bruiloft Marco&Kelsey</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fas fa-bars"></i>
@@ -38,7 +38,11 @@
 
         <!-- Featured Project Row -->
         <div class="row align-items-center no-gutters mb-4 mb-lg-5">
-          <div class="col-12">
+          <div class="col-12 text-center">
+            <i class="far fa-paper-plane fa-2x mb-2"></i>
+            <h2 class="mb-5">Geef aan dat je er blij bent!</h2>
+          </div>
+          <div class="col-12 text-left">
             <SignupForm />
           </div>
         </div>
@@ -88,13 +92,9 @@
         <div class="row">
           <div class="col-md-10 col-lg-8 mx-auto text-center">
 
-            <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
             <h2 class="text-white mb-5">Subscribe to receive updates!</h2>
 
-            <form class="form-inline d-flex">
-              <input type="email" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputEmail" placeholder="Enter email address...">
-              <button type="submit" class="btn btn-primary mx-auto">Subscribe</button>
-            </form>
+            
 
           </div>
         </div>
