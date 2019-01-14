@@ -59,7 +59,7 @@
 
       <div class="form-group" >
           <vue-recaptcha :sitekey="captcha.sitekey" @verify="captcha.key = $event; delete formErrors.captcha" @expired="captcha.key = ''" ref="captcha"></vue-recaptcha>
-        <div class="invalid-feedback d-block" v-show="formErrors.captcha">{{ formErrors.captcha }}</div>
+        <p class="invalid-feedback" :class="{'d-block' : formErrors.captcha }">{{ formErrors.captcha }}</p>
       </div>
 
       <div class="form-group" >
@@ -167,8 +167,7 @@ export default {
     },
 
     clear () {
-      this.$refs.captcha.reset()
-      this.captchaKey = this.errorMessage = null
+      this.errorMessage = null
       for (let key in this.form ) {
         this.form[key] = null
       }
