@@ -61,7 +61,7 @@
 
       <div class="field is-grouped">
         <div class="control">
-          <button :disabled="this.captcha.key" :class="{'is-loading' : loading}" class="button is-link" @click="submit">Submit</button>
+          <button :disabled="!this.captcha.key" :class="{'is-loading' : loading}" class="button is-link" @click="submit">Submit</button>
         </div>
       </div>
     </form>
@@ -89,10 +89,10 @@ export default {
       },
       formErrors: {},
       captcha: {
-        sitekey: 'XXXXX',
+        sitekey: '6LdjsYkUAAAAAATwqRcqqkLJgngho3eqzRNiryu-',
         key: null,
       },
-      url: 'https://script.google.com/macros/s/XXXXXXXXX/exec',
+      url: 'https://script.google.com/macros/s/AKfycbxvfqdH8kbhJGNHBrSyv9GLrkLPY3if1VdHH7v77YJbjk0S0SdO/exec',
       loading: false,
       success: false,
       error: false,
@@ -129,9 +129,11 @@ export default {
 
       // Send using XHR
       this.sendXHR('POST', this.url, body)
+      this.error = false;
     },
 
     validEmail(email) {
+      // eslint-disable-next-line
       var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
       return re.test(email)
     },
