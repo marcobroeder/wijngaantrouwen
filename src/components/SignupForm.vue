@@ -37,6 +37,13 @@
       </div>
 
       <div class="field">
+        <label class="checkbox">
+          <input type="checkbox" v-model="form.confirmation">
+          Stuur mij een bevestigingsmail
+        </label>
+      </div>
+
+      <div class="field">
         <label class="label">Subject</label>
         <div class="control">
           <div class="select">
@@ -85,7 +92,8 @@ export default {
         name: null,
         email: null,
         subject: null,
-        textarea: null
+        textarea: null,
+        confirmation: false
       },
       formErrors: {},
       captcha: {
