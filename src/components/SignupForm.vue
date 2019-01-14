@@ -1,75 +1,48 @@
 <template>
   <div>
-    <div class="notification is-primary" v-show="success">
-      <button class="delete" @click="success = false"></button>
+    <div class="alert alert-success alert-dismissible fade show" v-show="success">
       Verzonden!
+      <button type="button" class="close" aria-label="Close" @click="success = false">
+        <span aria-hidden="true">&times;</span>
+      </button>
     </div>
 
-    <div class="notification is-danger" v-show="error">
-      <button class="delete" @click="error = false"></button>
+    <div class="alert alert-danger alert-dismissible fade show" v-show="error">
       {{ errorMessage }}
+      <button type="button" class="close" aria-label="Close" @click="error = false">
+        <span aria-hidden="true">&times;</span>
+      </button>
     </div>
 
     <form novalidate="true">
-      <div class="field">
-        <label class="label">Naam</label>
-        <div class="control has-icons-right">
-          <input class="input" :class="{'is-danger' : formErrors.name}" type="text" placeholder="Naam" v-model="form.name" @input="delete formErrors.name">
-          <span class="icon is-small is-right" v-show="formErrors.name">
-            <i class="fas fa-exclamation-triangle"></i>
-          </span>
-        </div>
-        <p class="help is-danger" v-show="formErrors.name">{{ formErrors.name }}</p>
+      <div class="form-group">
+        <label for="name">Naam</label>
+        <input id="name" class="form-control" :class="{'is-invalid' : formErrors.name}" type="text" placeholder="Naam" v-model="form.name" @input="delete formErrors.name">
+        <p class="invalid-feedback" v-show="formErrors.name">{{ formErrors.name }}</p>
       </div>
 
-      <div class="field">
-        <label class="label">Email</label>
-        <div class="control has-icons-left has-icons-right">
-          <input class="input" :class="{'is-danger' : formErrors.email}" type="email" placeholder="Email input" v-model="form.email" @input="delete formErrors.email">
-          <span class="icon is-small is-left">
-            <i class="fas fa-envelope"></i>
-          </span>
-          <span class="icon is-small is-right" v-show="formErrors.email">
-            <i class="fas fa-exclamation-triangle"></i>
-          </span>
-        </div>
-        <p class="help is-danger" v-show="formErrors.email">{{ formErrors.email }}</p>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" class="form-control" :class="{'is-invalid' : formErrors.email}" type="text" placeholder="Naam" v-model="form.email" @input="delete formErrors.email">
+        <p class="invalid-feedback" v-show="formErrors.email">{{ formErrors.email }}</p>
       </div>
 
-      <div class="field">
-        <label class="checkbox">
-          <input type="checkbox" v-model="form.confirmation">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="confirmation" v-model="form.confirmation">
+        <label class="form-check-label" for="confirmation">
           Stuur mij een bevestigingsmail
         </label>
       </div>
 
-      <div class="field">
-        <label class="label">Subject</label>
-        <div class="control">
-          <div class="select">
-            <select v-model="form.subject">
-              <option>Select dropdown</option>
-              <option>With options</option>
-            </select>
-          </div>
-        </div>
-      </div>
-
-      <div class="field">
-        <label class="label">Message</label>
-        <div class="control">
-          <textarea class="textarea" placeholder="Textarea" v-model="form.textarea"></textarea>
-        </div>
-      </div>
-
-      <div class="field">
+      <div class="form-group">
         <vue-recaptcha :sitekey="captcha.sitekey" @verify="captcha.key = $event" @expired="captcha.key = ''" ref="captcha"></vue-recaptcha>
       </div>
 
-      <div class="field is-grouped">
-        <div class="control">
-          <button :disabled="!this.captcha.key" :class="{'is-loading' : loading}" class="button is-link" @click="submit">Submit</button>
-        </div>
+      <div class="form-group">
+        <button :disabled="!this.captcha.key" class="btn btn-primary" @click="submit">
+          <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" v-show="loading"></span>
+          Submit
+        </button>
       </div>
     </form>
   </div>
@@ -137,7 +110,7 @@ export default {
 
       // Send using XHR
       this.sendXHR('POST', this.url, body)
-      this.error = false;
+      this.error = false
     },
 
     validEmail(email) {
@@ -162,7 +135,7 @@ export default {
       this.$refs.captcha.reset()
       this.captchaKey = this.errorMessage = null
       for (let key in this.form ) {
-        this.form[key] = null;
+        this.form[key] = null
       }
     }
   }

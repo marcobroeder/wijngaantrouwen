@@ -9,7 +9,9 @@
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
-    "bulma": "^0.7.2",
+    "bootstrap": "^4.2.1",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.6",
     "vue": "^2.5.21",
     "vue-recaptcha": "^1.1.1"
   },

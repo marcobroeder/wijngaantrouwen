@@ -15,7 +15,8 @@
 </template>
 
 <script>
-import 'bulma/css/bulma.css'
+import 'bootstrap'
+import 'bootstrap/dist/css/bootstrap.css'
 import '@fortawesome/fontawesome-free/css/all.css'
 import SignupForm from './components/SignupForm.vue'
 
