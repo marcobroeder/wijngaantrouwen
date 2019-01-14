@@ -57,12 +57,13 @@
         <textarea class="form-control" id="opmerkingen" placeholder="Kom je wat later of ga je eerder weg? Of geef hier eventuele voedselallergieën door." rows="4" v-model="form.opmerkingen"></textarea>
       </div>
 
-      <div class="form-group">
-        <vue-recaptcha :sitekey="captcha.sitekey" @verify="captcha.key = $event" @expired="captcha.key = ''" ref="captcha"></vue-recaptcha>
+      <div class="form-group" >
+          <vue-recaptcha :sitekey="captcha.sitekey" @verify="captcha.key = $event; delete formErrors.captcha" @expired="captcha.key = ''" ref="captcha"></vue-recaptcha>
+        <div class="invalid-feedback d-block" v-show="formErrors.captcha">{{ formErrors.captcha }}</div>
       </div>
 
-      <div class="form-group">
-        <button :disabled="!this.captcha.key" class="btn btn-primary" @click="submit">
+      <div class="form-group" >
+        <button class="btn btn-primary" @click="submit">
           <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" v-show="loading"></span>
           Submit
         </button>
@@ -118,6 +119,9 @@ export default {
       }
       if (!this.form.aanwezigheid) {
         this.formErrors.aanwezigheid = "Geef aan of je aanwezig bent."
+      }
+      if (!this.captcha.key) {
+        this.formErrors.captcha = "Bevestig dat je geen robot bent."
       }
       if (!this.form.overnachting) {
         this.formErrors.overnachting = "Geef aan of je interesse hebt in een overnachting."
