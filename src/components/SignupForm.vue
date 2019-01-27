@@ -170,8 +170,10 @@ export default {
       this.errorMessage = null
       for (let key in this.form ) {
         this.form[key] = null
-      }
+      }      
     }
   }
 }
+
+
 </script>

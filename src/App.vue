@@ -10,10 +10,13 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">About</a>
+              <a class="nav-link js-scroll-trigger" href="#app">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
+              <a class="nav-link js-scroll-trigger" href="#welkom">Welkom</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#aanmelden">Aanmelden</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#signup">Contact</a>
@@ -32,6 +35,26 @@
       </div>
     </header>
 
+    <!-- Welkom -->
+    <section id="welkom" class="projects-section bg-light">
+      <div class="container">
+
+        <!-- Featured Project Row -->
+        <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+          <div class="col-12 text-center">
+            <i class="far fa-2x mb-2"></i>
+            <h2 class="mb-5">Welkom!</h2>
+          </div>
+          <div class="col-12 text-left">
+            Welkom...
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+
+
     <!-- Projects Section -->
     <section id="aanmelden" class="projects-section bg-light">
       <div class="container">
@@ -46,8 +69,6 @@
             <SignupForm />
           </div>
         </div>
-
-        
         
         <!-- Project One Row -->
         <!-- <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
@@ -94,9 +115,7 @@
         <div class="row">
           <div class="col-md-10 col-lg-8 mx-auto text-center">
 
-            <h2 class="text-white mb-5">Subscribe to receive updates!</h2>
-
-            
+            <h2 class="text-white mb-5">Contact</h2>
 
           </div>
         </div>
@@ -109,52 +128,39 @@
 
         <div class="row">
 
-          <div class="col-md-4 mb-3 mb-md-0">
-            <div class="card py-4 h-100">
+          <div class="col-md-4 mb-3 mb-md-0" >
+            <div class="card py-4 h-100" id="adres">
               <div class="card-body text-center">
                 <i class="fas fa-map-marked-alt text-primary mb-2"></i>
-                <h4 class="text-uppercase m-0">Address</h4>
+                <h4 class="text-uppercase m-0">Adres</h4>
                 <hr class="my-4">
-                <div class="small text-black-50">4923 Market Street, Orlando FL</div>
+                <div class="small text-black">Wijngoed Montferland<br/> Munsterweg 4 <br/>7081HJ Gendringen</div>
               </div>
             </div>
           </div>
 
           <div class="col-md-4 mb-3 mb-md-0">
-            <div class="card py-4 h-100">
+            <div class="card py-4 h-100" id="route">
               <div class="card-body text-center">
-                <i class="fas fa-envelope text-primary mb-2"></i>
-                <h4 class="text-uppercase m-0">Email</h4>
+                <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                <h4 class="text-uppercase m-0">Route</h4>
                 <hr class="my-4">
-                <div class="small text-black-50">
-                  <a href="#">hello@yourdomain.com</a>
+                <div class="small text-black">Plan je route via <a href="https://goo.gl/maps/rGdNKL5s65Q2" target="_blank">google maps</a>.
                 </div>
               </div>
             </div>
           </div>
 
           <div class="col-md-4 mb-3 mb-md-0">
-            <div class="card py-4 h-100">
+            <div class="card py-4 h-100" id="vragen">
               <div class="card-body text-center">
-                <i class="fas fa-mobile-alt text-primary mb-2"></i>
-                <h4 class="text-uppercase m-0">Phone</h4>
+                <i class="fas fa-envelope text-primary mb-2"></i>
+                <h4 class="text-uppercase m-0">Email</h4>
                 <hr class="my-4">
-                <div class="small text-black-50">+1 (555) 902-8832</div>
+                <div class="small text-black">Voor alle vragen/opmerkingen, kun je contact opnemen met onze ceremoniemeester via: <a href="mailto:marcoenkelseygaantrouwen@gmail.com">marcoenkelseygaantrouwen@gmail.com</a></div>
               </div>
             </div>
           </div>
-        </div>
-
-        <div class="social d-flex justify-content-center">
-          <a href="#" class="mx-2">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="#" class="mx-2">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="#" class="mx-2">
-            <i class="fab fa-github"></i>
-          </a>
         </div>
 
       </div>
@@ -163,7 +169,7 @@
     <!-- Footer -->
     <footer class="bg-black small text-center text-white-50">
       <div class="container">
-        Copyright &copy; Your Website 2018
+        Copyright &copy; Marco en Kelsey 2019
       </div>
     </footer>
   </div>
@@ -189,10 +195,44 @@ export default {
 </script>
 
 <style scoped>
+.projects-section {
+    padding: 5rem 0;
+}
+
 .masthead {
   background: url("./assets/foto_marco_kelsey.jpg");
   background-position: center;
   height: 720px;
   padding: 0
 }
+
+.signup-section {
+  background: linear-gradient(to bottom,rgba(22,22,22,.1) 0,rgba(22,22,22,.5) 75%,#161616 100%),url("./assets/verona.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 14rem 0;
+  background-size: cover;
+}
+
+#adres{
+  background: url("./assets/scooter.jpg");
+  background-position: center;
+  background-size: cover;
+  padding:0;
+}
+
+#route{
+  background: url("./assets/route.jpg");
+  background-position: center;
+  background-size: cover;
+  padding:0;
+}
+
+#vragen{
+  background: url("./assets/vragen.jpg");
+  background-position: center;
+  background-size: cover;
+  padding:0;
+}
+
 </style>
