@@ -46,7 +46,11 @@
             <h2 class="mb-5">Welkom!</h2>
           </div>
           <div class="col-12 text-left">
+            Wij gaan trouwen! Op 3 augustus geven wij elkaar het ja-woord tussen de Nederlandse wijnranken. Wij horen graag of je aanwezig bent op deze feestelijke dag.
+
             Welkom...
+            - Vul aub ook het formulier in als je niet komt
+            - We proberen wat te regelen qua overnachting.
           </div>
         </div>
 

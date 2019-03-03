@@ -16,13 +16,23 @@
 
     <form novalidate="true">
       <div class="form-group">
+        <label for="aanwezigheid">Aanwezigheid</label>
+        <select id="aanwezigheid" class="form-control" v-model="form.aanwezigheid" :class="{'is-invalid' : formErrors.aanwezigheid}">
+          <option disabled value="">Geef hier aan of je aanwezig bent</option>
+          <option>Ik ben er bij!</option>
+          <option>Ik ben er niet bij...</option>
+        </select>
+        <p class="invalid-feedback" v-show="formErrors.aanwezigheid">{{ formErrors.aanwezigheid }}</p>
+      </div>
+
+      <div class="form-group">
         <label for="name">Naam</label>
         <input id="name" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" :class="{'is-invalid' : formErrors.name}" type="text" placeholder="Voor- en achternaam" v-model="form.name" @input="delete formErrors.name">
         <p class="invalid-feedback" v-show="formErrors.name">{{ formErrors.name }}</p>
       </div>
 
       <div class="form-group">
-        <label for="tweedenaam">Kom je met z'n tweeën?</label>
+        <label for="tweedenaam">Partners zijn uiteraard ook welkom! Kom je met z'n tweeën?</label>
         <input id="tweedenaam" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" :class="{'is-invalid' : formErrors.tweedenaam}" type="text" placeholder="Voor- en achternaam" v-model="form.tweedenaam">
       </div>
 
@@ -30,16 +40,6 @@
         <label for="email">Email</label>
         <input id="email" class="form-control" :class="{'is-invalid' : formErrors.email}" type="text" placeholder="Op dit mailadres ontvang je later updates over de bruiloft" v-model="form.email" @input="delete formErrors.email">
         <p class="invalid-feedback" v-show="formErrors.email">{{ formErrors.email }}</p>
-      </div>
-
-      <div class="form-group">
-        <label for="aanwezigheid">Aanwezigheid</label>
-        <select id="aanwezigheid" class="form-control" v-model="form.aanwezigheid" :class="{'is-invalid' : formErrors.aanwezigheid}">
-          <option disabled value="">Geef aan of je aanwezig bent</option>
-          <option>Ik ben er bij!</option>
-          <option>Ik ben er niet bij...</option>
-        </select>
-        <p class="invalid-feedback" v-show="formErrors.aanwezigheid">{{ formErrors.aanwezigheid }}</p>
       </div>
 
       <div class="form-group">
@@ -54,7 +54,7 @@
 
       <div class="form-group">
         <label for="opmerkingen">Plaats hier eventuele opmerkingen</label>
-        <textarea class="form-control" id="opmerkingen" placeholder="Kom je wat later of ga je eerder weg? Of geef hier eventuele voedselallergieën door." rows="4" v-model="form.opmerkingen"></textarea>
+        <textarea class="form-control" id="opmerkingen" placeholder="Geef hier bijvoorbeeld eventuele voedselallergieën door." rows="4" v-model="form.opmerkingen"></textarea>
       </div>
 
       <div class="form-group" >
@@ -65,7 +65,7 @@
       <div class="form-group" >
         <button class="btn btn-primary" @click="submit">
           <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" v-show="loading"></span>
-          Submit
+          Verstuur
         </button>
       </div>
     </form>
