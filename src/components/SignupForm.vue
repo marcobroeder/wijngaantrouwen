@@ -90,7 +90,7 @@ export default {
         email: null,
         subject: null,
         textarea: null,
-        confirmation: false,
+        confirmation: true,
         aanwezigheid: '',
         overnachting: ''
       },

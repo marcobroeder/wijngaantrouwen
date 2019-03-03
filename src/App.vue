@@ -46,11 +46,11 @@
             <h2 class="mb-5">Welkom!</h2>
           </div>
           <div class="col-12 text-left">
-            Wij gaan trouwen! Op 3 augustus geven wij elkaar het ja-woord tussen de Nederlandse wijnranken. Wij horen graag of je aanwezig bent op deze feestelijke dag.
+            <p>Wij gaan trouwen!</p><p>Op 3 augustus geven wij elkaar het ja-woord tussen de Nederlandse wijnranken. Graag vragen wij jullie om onderstaand formulier in te vullen en aan te geven of jullie wel of niet aanwezig kunnen zijn.</p>
+            <p>Onze bruiloft vindt plaats op het prachtige Wijngoed Montferland. Wij zouden het erg leuk vinden als mensen in de avond kunnen genieten van de lekkere wijnen die Wijngoed Montferland te bieden heeft. Daarom willen wij gaan kijken naar overnachtingsmogelijkheden in de omgeving. In het formulier kun je aangeven of je interesse hebt in een overnachting. Wij gaan dan met hotels in de omgeving in gesprek om te kijken of we een leuke prijs (incl. vervoer van locatie naar hotel) kunnen regelen voor jullie. Uiteraard staat hier nog niets vast, naderhand zullen wij jullie mailen met de prijzen en kunnen jullie alsnog kiezen of je hier gebruik van maakt of niet. </p>
+            <p>Tot slot kun je jouw e-mail adres invullen. Wij zullen jullie via dit e-mail adres meer informatie geven over de bruiloft zoals het programma, de dresscode en overige belangrijke informatie.</p>
 
-            Welkom...
-            - Vul aub ook het formulier in als je niet komt
-            - We proberen wat te regelen qua overnachting.
+            <div class="mx-auto text-center"><img src="./assets/liefs.jpg" class="mx-auto"/></div>
           </div>
         </div>
 
@@ -199,8 +199,9 @@ export default {
 </script>
 
 <style scoped>
+
 .projects-section {
-    padding: 5rem 0;
+    padding: 3rem 0;
 }
 
 .masthead {
