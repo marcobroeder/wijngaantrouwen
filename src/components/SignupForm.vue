@@ -14,6 +14,7 @@
       </button>
     </div>
 
+    <div id="formulier" v-if="formtonen">
     <form novalidate="true">
       <div class="form-group">
         <label for="aanwezigheid">Aanwezigheid</label>
@@ -70,6 +71,7 @@
       </div>
     </form>
   </div>
+  </div>
 </template>
 
 <script>
@@ -103,7 +105,8 @@ export default {
       loading: false,
       success: false,
       error: false,
-      errorMessage: null
+      errorMessage: null,
+      formtonen: true
     }
   },
 
@@ -137,6 +140,8 @@ export default {
         return
       }
 
+
+
       let body = {
         ...this.form, 
         captchaKey: this.captcha.key,
@@ -146,6 +151,9 @@ export default {
       // Send using XHR
       this.sendXHR('POST', this.url, body)
       this.error = false
+      this.formtonen = false
+      router.push({ path: '#aanmelden' })
+      //this.form.v-show = false
     },
 
     validEmail(email) {
