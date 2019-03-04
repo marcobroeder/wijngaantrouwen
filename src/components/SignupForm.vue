@@ -151,8 +151,8 @@ export default {
       // Send using XHR
       this.sendXHR('POST', this.url, body)
       this.error = false
-      this.formtonen = false
-      router.push({ path: '#aanmelden' })
+      
+      
       //this.form.v-show = false
     },
 
@@ -163,9 +163,13 @@ export default {
     },
 
     onSuccess () {
+
+      this.success = true
+      this.formtonen = false
       this.loading = false
       this.clear()
-      this.success = true
+      window.location.replace("#aanmelden")
+
     },
 
     onError (error) {
