@@ -16,7 +16,7 @@
               <a class="nav-link js-scroll-trigger" href="#welkom">Welkom</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#aanmelden">Aanmelden</a>
+              <a class="nav-link js-scroll-trigger" href="#aanzoek">Aanzoek</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#signup">Contact</a>
@@ -29,9 +29,9 @@
     <!-- Header -->
     <header class="masthead">
       <div class="container d-flex h-100 align-items-end pb-5">
-        <div class="mx-auto text-center">
+       <!-- <div class="mx-auto text-center">
           <a href="#aanmelden" class="btn btn-primary js-scroll-trigger">Aanmelden</a>
-        </div>
+        </div> -->
       </div>
     </header>
 
@@ -58,13 +58,31 @@
       </div>
     </section>
 
-
-    <!-- Projects Section -->
-    <section id="aanmelden" class="projects-section bg-light">
+    <section id="aanzoek" class="projects-section bg-light">
       <div class="container">
 
         <!-- Featured Project Row -->
         <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+          <div class="col-12 text-center">
+            <i class="far fa-2x mb-2"></i>
+            <h2 class="mb-5">Bekijk het huwelijksaanzoek</h2>
+          </div>
+          <div class="col-12 text-center">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/9keXm8GS5BM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <!--
+    <section id="aanmelden" class="projects-section bg-light">
+      <div class="container"> -->
+
+        <!-- Featured Project Row -->
+        <!--<div class="row align-items-center no-gutters mb-4 mb-lg-5">
           <div class="col-12 text-center">
             <i class="far fa-paper-plane fa-2x mb-2"></i>
             <h2 class="mb-5">Geef aan dat je er blij bent!</h2>
@@ -72,7 +90,7 @@
           <div class="col-12 text-left">
             <SignupForm />
           </div>
-        </div>
+        </div> -->
         
         <!-- Project One Row -->
         <!-- <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
@@ -110,8 +128,8 @@
           </div>
         </div> -->
 
-      </div>
-    </section>
+      <!--</div>
+    </section>-->
 
     <!-- Signup Section -->
     <section id="signup" class="signup-section">
