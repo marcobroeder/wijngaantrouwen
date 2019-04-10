@@ -45,10 +45,13 @@
             <i class="far fa-2x mb-2"></i>
             <h2 class="mb-5">Welkom!</h2>
           </div>
-          <div class="col-12 text-left">
-            <p>Wij gaan trouwen!</p><p>Op 3 augustus geven wij elkaar het ja-woord tussen de Nederlandse wijnranken. Graag vragen wij jullie om onderstaand formulier in te vullen en aan te geven of jullie wel of niet aanwezig kunnen zijn.</p>
+          <div class="col-12 text-center">
+            <p>Wij gaan trouwen! Op 3 augustus geven wij elkaar het ja-woord tussen de Nederlandse wijnranken.</p>
+            <p>Via deze website zullen we jullie op de hoogte houden van alle informatie over de bruiloft!</p>
+
+            <!--<p> Graag vragen wij jullie om onderstaand formulier in te vullen en aan te geven of jullie wel of niet aanwezig kunnen zijn.</p>
             <p>Onze bruiloft vindt plaats op het prachtige Wijngoed Montferland. Wij zouden het erg leuk vinden als mensen in de avond kunnen genieten van de lekkere wijnen die Wijngoed Montferland te bieden heeft. Daarom willen wij gaan kijken naar overnachtingsmogelijkheden in de omgeving. In het formulier kun je aangeven of je interesse hebt in een overnachting. Wij gaan dan met hotels in de omgeving in gesprek om te kijken of we een leuke prijs (incl. vervoer van locatie naar hotel) kunnen regelen voor jullie. Uiteraard staat hier nog niets vast, naderhand zullen wij jullie mailen met de prijzen en kunnen jullie alsnog kiezen of je hier gebruik van maakt of niet. </p>
-            <p>Tot slot kun je jouw e-mail adres invullen. Wij zullen jullie via dit e-mail adres meer informatie geven over de bruiloft zoals het programma, de dresscode en overige belangrijke informatie.</p>
+            <p>Tot slot kun je jouw e-mail adres invullen. Wij zullen jullie via dit e-mail adres meer informatie geven over de bruiloft zoals het programma, de dresscode en overige belangrijke informatie.</p> -->
 
             <div class="mx-auto text-center"><img src="./assets/liefs.jpg" class="mx-auto"/></div>
           </div>
